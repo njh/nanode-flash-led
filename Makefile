@@ -6,7 +6,7 @@ SERIAL_PORT = /dev/tty.usbserial-A700fbtR
 # Nanode settings
 AVR_MCU = atmega328p
 AVR_MCU_SPEED = 16000000UL
-AVRDUDE_OPTIONS = -P $(SERIAL_PORT) -c arduino -b 57600 -p $(AVR_MCU)
+AVRDUDE_OPTIONS = -q -P $(SERIAL_PORT) -c arduino -b 57600 -p $(AVR_MCU)
 
 # AVR Compiler definitions
 CC       = avr-gcc
