@@ -14,7 +14,7 @@ LD       = avr-gcc
 ELF_SIZE = avr-size
 OBJCOPY  = avr-objcopy
 CFLAGS   = -mmcu=$(AVR_MCU) -DF_CPU=$(AVR_MCU_SPEED) -Wall -W -Os
-LDFLAGS  = -mmcu=$(AVR_MCU) -Wl
+LDFLAGS  = -mmcu=$(AVR_MCU)
 
 
 all: nanode-flash-led.hex
