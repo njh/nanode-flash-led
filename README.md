@@ -1,23 +1,20 @@
 nanode-flash-led
 ================
 
-This is a basic pure-C program to flash the red LED on the [Nanode]. I have created it a 
-starting point to help people write pure-C for their [Nanode].
+This is a basic pure-C program to flash the red LED on the [Nanode], an Arduino compatible board, with a built-in [ENC28J60] Ethernet controller. I have created it a starting point to help people write pure-C for their [Nanode].
 
 
 
 Getting started on Mac OS X
 ---------------------------
 
-I personally use [Homebrew] on my Mac but unfortunately it doesn't include avr-gcc in the main git repository. However you can use the formulas from [Lars Immisch] directly:
+I personally use [Homebrew] on my Mac, but it does not include avr-gcc in the main repository. However you can use the formulas from [CrossBuild tools for OSX] in the [homebrew-avr] repository:
 
+    brew tap osx-cross/avr
+    brew install avr-gcc avr-libc avr-binutils
     brew install avrdude
-    brew install https://raw.github.com/larsimmisch/homebrew-alt/master/avr/avr-binutils.rb
-    brew install https://raw.github.com/larsimmisch/homebrew-alt/master/avr/avr-gcc.rb
-    brew install https://raw.github.com/larsimmisch/homebrew-alt/master/avr/avr-libc.rb
 
-Alternatively, you could try following these instructions:
-http://www.ladyada.net/learn/avr/setup-mac.html
+Alternatively, you could try following these instructions: http://www.ladyada.net/learn/avr/setup-mac.html
 
 There are lots of other tutorials on Google.
 
@@ -82,7 +79,10 @@ Then edit the *SERIAL_PORT* definition in the Makefile:
 THen follow the compilation instructions above.
 
 
-[Homebrew]:     http://mxcl.github.com/homebrew/
-[Lars Immisch]: http://github.com/larsimmisch
-[Nanode]:       http://nanode.eu/
+[Arduino]:                  https://www.arduino.cc/
+[Homebrew]:                 http://mxcl.github.com/homebrew/
+[CrossBuild tools for OSX]: https://github.com/osx-cross
+[homebrew-avr]:             https://github.com/osx-cross/homebrew-avr
+[enc28j60]:                 http://www.microchip.com/enc28j60
+[Nanode]:                   http://nanode.eu/
 
